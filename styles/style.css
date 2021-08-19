@@ -1,0 +1,45 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/backgroundCoins.png);
+    background-size: cover;
+    height: 100vh;
+}
+
+.mainContainer {
+
+}
+
+.containerDiv {
+
+}
+
+.btnForImg {
+
+}
+
+.btnForTxt {
+
+}
+
+.textResults {
+
+}
+
+.luigiHeads {
+
+}
+
+.marioTails {
+
+}
+
+h3 {
+    
+}

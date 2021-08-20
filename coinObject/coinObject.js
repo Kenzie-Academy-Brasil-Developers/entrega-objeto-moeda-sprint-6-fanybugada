@@ -1,19 +1,26 @@
 let mainContainer = document.createElement("main");
     mainContainer.classList.add("mainContainer");
       document.body.appendChild(mainContainer);
+
 let containerDiv = document.createElement("div");
     containerDiv.classList.add("containerDiv");
+
 let btnForImg = document.createElement("button");
-    btnForImg.classList.add("btnForImg");
+    btnForImg.classList.add("btnForCall");
     btnForImg.innerText = "Get Random Coin Image";
+    btnForImg.type = "image";
       mainContainer.appendChild(btnForImg);
+
 let btnForTxt = document.createElement("button");
-    btnForTxt.classList.add("btnForTxt");
+    btnForTxt.classList.add("btnForCall");
     btnForTxt.innerText = "Get Random Coin Text";
+    btnForTxt.type = "text";
       mainContainer.appendChild(btnForTxt);
+
 let textResults = document.createElement("span");
     textResults.classList.add("textResults");
       
+let loopNumber = 20;
 
 const coin = {
     state: 0,  
@@ -37,41 +44,21 @@ const coin = {
       // Colocar uma imagem correspondente a essa valor.
       // image.src = "./CAMINHO/IMAGEM.JPEG"
       // image.alt = "Heads/Tails"
-    toHTML: function (typeOfCoin) {
-      // const image = document.createElement("img");
-      let output;
-
-      if (typeOfCoin === "image") {
+    toHTML: function () {
+      const image = document.createElement("img");
 
         if (this.toString() === "Heads") {
-          let image = document.createElement("img");
+          // let image = document.createElement("img");
               image.src = "../images/luigiSide.png";
               image.classList.add("luigiHeads");
-                containerDiv.appendChild(image);
+              containerDiv.appendChild(image);
         }
-        if (this.toString() === "Tails") {
-          let image = document.createElement("img");
+        else {
+          // let image = document.createElement("img");
               image.src = "../images/marioSide.png";
               image.classList.add("marioTails");
                 containerDiv.appendChild(image);
         }
-      }
-
-      if (typeOfCoin === "text") {
-
-        if (this.toString() === "Heads") {
-          let textHeads = document.createElement("h3");
-          output = "Heads";
-          textHeads.innerText = output;
-            containerDiv.appendChild(textHeads);
-        }
-        if (this.toString() === "Tails") {
-          let textTails = document.createElement("h3");
-          output = "Tails";
-          textTails.innerText = output;
-            containerDiv.appendChild(textTails);
-        }
-      }
     },
   };
 
@@ -84,7 +71,7 @@ const coin = {
   function display20Flips() {
     const results = [];
     
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < loopNumber; i++) {
       results.push(coin.toString());
     }
 
@@ -106,14 +93,11 @@ const coin = {
   function display20Images() {
     const results = [];
     
-    for (let i = 0; i < 20; i++) {
-      console.log(coin.toHTML());
+    for (let i = 0; i < loopNumber; i++) {
       results.push(coin.toHTML());
-      console.log(containerDiv);
-      console.log(results);
-        containerDiv.appendChild(results[i]);
-        mainContainer.appendChild(containerDiv);
     }
+
+    mainContainer.appendChild(containerDiv);
     console.log(results);
     return results;
   }

@@ -1,0 +1,51 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/backgroundCoins.png);
+    background-size: cover;
+    height: 100vh;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 160px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.containerDiv {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, .4);
+    box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.btnForCall {
+    border: none;
+    background: rgba(255, 255, 255, .4);
+    box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 50%);
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.luigiHeads {
+    width: 105px;
+}
+
+.marioTails {   
+    width: 100px;
+}

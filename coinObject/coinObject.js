@@ -49,13 +49,13 @@ const coin = {
 
         if (this.toString() === "Heads") {
           // let image = document.createElement("img");
-              image.src = "../images/luigiSide.png";
+              image.src = "./images/luigiSide.png";
               image.classList.add("luigiHeads");
               containerDiv.appendChild(image);
         }
         else {
           // let image = document.createElement("img");
-              image.src = "../images/marioSide.png";
+              image.src = "./images/marioSide.png";
               image.classList.add("marioTails");
                 containerDiv.appendChild(image);
         }
